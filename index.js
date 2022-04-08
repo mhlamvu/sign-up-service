@@ -7,8 +7,11 @@ app.use(cors())
 
 // Middleware
 app.use(express.static(__dirname + "/dist"))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
 app.post("/", (req, res) => {
+  console.log(req.body)
   res.send("Success!!!")
 })
 
