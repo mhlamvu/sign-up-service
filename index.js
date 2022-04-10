@@ -25,11 +25,11 @@ const addEmailToMailchimp = email => {
 
   const options = {
     method: 'POST',
-    url: 'https://us14.api.mailchimp.com/3.0/lists/74c1740867/members',
+    url: `https://us14.api.mailchimp.com/3.0/lists/${process.env.LIST_ID}/members`,
     headers: {
       'user-agent': 'vscode-restclient',
       'content-type': 'application/application/json',
-      authorization: 'token 559214b542dd914f437b30ace69cdb0c-us14'
+      authorization: `token ${process.env.MAILCHIMP_API}`
     },
     data: {
       "email_address": email,
@@ -44,16 +44,3 @@ const addEmailToMailchimp = email => {
   });
 
 }
-
-
-
-
-/*
-
-curl --request GET \
---url 'https://us14.api.mailchimp.com/3.0/' \
---user 'anystring:559214b542dd914f437b30ace69cdb0c-us14
-
-API: 559214b542dd914f437b30ace69cdb0c-us14
-
-*/
