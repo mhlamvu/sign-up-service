@@ -21,7 +21,7 @@ app.listen(3000, () => {
 
 
 const addEmailToMailchimp = email => {
-  const axios = require("axios").default;
+  const axios = require("axios").default
 
   const options = {
     method: 'POST',
@@ -37,10 +37,10 @@ const addEmailToMailchimp = email => {
     }
   };
 
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
+  axios.request(options).then( response => {
+    console.log(response.data)
+  }).catch( error => {
+    console.error(error)
   });
 
 }

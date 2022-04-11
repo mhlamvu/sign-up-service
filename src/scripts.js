@@ -1,7 +1,7 @@
 var $ = require("jquery")
 
 
-$("form").submit(function(event) {
+$("form").submit( event => {
 
   var userEmail = $("#email").val()
   console.log(userEmail)
@@ -13,11 +13,9 @@ $("form").submit(function(event) {
     data: {
       email: userEmail
     },
-    success: function(response) {
+    success: response => {
       console.log(response)
     }
   })
 
 })
-// console.log($("form"))
-// console.log("Working")
